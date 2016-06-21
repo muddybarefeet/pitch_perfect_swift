@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Tap to Record"; ObjectID = "Aj9-4K-fFQ"; */
+"Aj9-4K-fFQ.text" = "Tap to Record";
+
+/* Class = "UIButton"; normalTitle = "Record"; ObjectID = "VGg-cF-K3F"; */
+"VGg-cF-K3F.normalTitle" = "Record";
+
+/* Class = "UIButton"; normalTitle = "Stop Recording"; ObjectID = "ron-T4-08l"; */
+"ron-T4-08l.normalTitle" = "Stop Recording";
