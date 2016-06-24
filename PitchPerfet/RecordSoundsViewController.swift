@@ -16,6 +16,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
 
     var audioRecorder:AVAudioRecorder!
+//    var recordedAudio:RecordedAudio!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,7 +82,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if (segue.identifier == "stopRecording") {
             let playSoundsVC = segue.destinationViewController as! PlaySoundsViewController
             let recordedAudioURL = sender as! NSURL
-            playSoundsVC.recordedAudioUR = recordedAudioURL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
         }
     }
 }
