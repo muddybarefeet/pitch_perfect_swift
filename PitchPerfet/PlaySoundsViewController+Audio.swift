@@ -94,7 +94,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             }
             
             // schedule a stop timer for when audio finishes playing
-            self.stopTimer = NSTimer(timeInterval: delayInSeconds, target: self, selector: "stopAudio", userInfo: nil, repeats: false)
+            self.stopTimer = NSTimer(timeInterval: delayInSeconds, target: self, selector: #selector(PlaySoundsViewController.stopAudio), userInfo: nil, repeats: false)
             NSRunLoop.mainRunLoop().addTimer(self.stopTimer!, forMode: NSDefaultRunLoopMode)
         }
         
@@ -154,7 +154,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         snailButton.enabled = enabled
         chipmunkButton.enabled = enabled
         rabbitButton.enabled = enabled
-        vaderButton.enabled = enabled
+        darthButton.enabled = enabled
         echoButton.enabled = enabled
         reverbButton.enabled = enabled
     }
