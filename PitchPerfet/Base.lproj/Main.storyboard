@@ -158,10 +158,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="k7R-OQ-Rmj"/>
                     <connections>
-                        <outlet property="chipmunkButton" destination="Tr9-pF-BLs" id="Kdo-i9-fZr"/>
+                        <outlet property="chipmunkButton" destination="h90-kf-V2Z" id="jjL-ke-sZW"/>
                         <outlet property="darthButton" destination="Q91-62-xwf" id="IHc-nT-RxA"/>
                         <outlet property="echoButton" destination="eBg-Z2-xma" id="vBG-tp-52x"/>
-                        <outlet property="rabbitButton" destination="Q91-62-xwf" id="RLW-qZ-Fdj"/>
+                        <outlet property="rabbitButton" destination="Mvb-pc-hYI" id="QsX-39-pd8"/>
                         <outlet property="reverbButton" destination="eBn-uw-w7k" id="AdW-hf-zg2"/>
                         <outlet property="snailButton" destination="Tr9-pF-BLs" id="WRK-sJ-2B1"/>
                         <outlet property="stopButton" destination="K5i-h3-GJa" id="ptc-c5-vaE"/>

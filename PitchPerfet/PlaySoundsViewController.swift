@@ -25,10 +25,11 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: NSTimer!
     
-    enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Echo, Reverb, Darth }
+    enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Darth, Echo, Reverb }
     
     @IBAction func playSoundForButton(sender: UIButton) {
         print("Play Sound Button Pressed")
+        print("sender:", ButtonType(rawValue:sender.tag)!)
         switch(ButtonType(rawValue:sender.tag)!) {
         case .Slow:
             playSound(rate:0.5)
@@ -61,6 +62,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        print("setting to enable in view will appear")
         configureUI(.NotPlaying)
     }
 
