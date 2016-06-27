@@ -63,7 +63,6 @@ class PlaySoundsViewController: UIViewController {
         reverbButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         echoButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         setupAudio()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,8 +72,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
 }

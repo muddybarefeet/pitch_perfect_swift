@@ -16,10 +16,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
 
     var audioRecorder:AVAudioRecorder!
-//    var recordedAudio:RecordedAudio!
 
-    @IBAction func RecordAudio(sender: AnyObject) {
-        
+    @IBAction func RecordAudio(sender: AnyObject) { 
         print("Record Button Pressed")
         configureRecordingText(isRecording: true)
         
@@ -40,17 +38,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
     }
 
     @IBAction func stopRecording(sender: AnyObject) {
-        
         print("Stop Recording")
         configureRecordingText(isRecording: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
-        
     }
     
 //    added function to deal with toggling the record and stop buttons
@@ -62,6 +57,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     override func viewWillAppear(animated: Bool) {
         stopRecordingButton.enabled = false
+        
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -81,5 +77,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
     }
+
 }
 
