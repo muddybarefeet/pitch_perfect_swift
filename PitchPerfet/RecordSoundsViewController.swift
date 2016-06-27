@@ -17,18 +17,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder:AVAudioRecorder!
 //    var recordedAudio:RecordedAudio!
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func RecordAudio(sender: AnyObject) {
         
         print("Record Button Pressed")
-        recordingLabel.text = "Recording!"
-        stopRecordingButton.enabled = true
-        recoderButton.enabled = false
+        configureRecordingText(isRecording: true)
         
 //        create the file path and save to a file
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
@@ -53,15 +46,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func stopRecording(sender: AnyObject) {
         
         print("Stop Recording")
-        recoderButton.enabled = true
-        stopRecordingButton.enabled = false
-        recordingLabel.text = "Tap to Record!"
-//        tell the recorder to stop
+        configureRecordingText(isRecording: false)
         audioRecorder.stop()
-//        close the session
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         
+    }
+    
+//    added function to deal with toggling the record and stop buttons
+    func configureRecordingText(isRecording recording: Bool){
+        recordingLabel.text = recording ? "Recording!" : "Tap to Record"
+        stopRecordingButton.enabled = recording
+        recoderButton.enabled = !recording
     }
 
     override func viewWillAppear(animated: Bool) {
