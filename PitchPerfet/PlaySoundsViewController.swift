@@ -67,11 +67,8 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         print("setting to enable in view will appear")
+        super.viewWillAppear(animated)
         configureUI(.NotPlaying)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
 }
